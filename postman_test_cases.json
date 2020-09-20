@@ -1,0 +1,231 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ticketsystem",
+		"_postman_id": "5c945b7e-6440-85ca-324c-43361d6aecc0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/airport/add",
+			"request": {
+				"url": "http://localhost:8080/airport/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n\t{\r\n\t  \"id\": 1,\r\n\t  \"name\": \"Sabiha\"\r\n\t},\r\n\r\n\t{\r\n\t  \"id\": 2,\r\n\t  \"name\": \"Istanul HL\"\r\n\t},\r\n\r\n\t{\r\n\t  \"id\": 3,\r\n\t  \"name\": \"Ankara HL\"\r\n\t}\r\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/airport/getAll",
+			"request": {
+				"url": "http://localhost:8080/airport/getAll",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n\t{\r\n\t  \"id\": 1,\r\n\t  \"name\": \"Sabiha\"\r\n\t},\r\n\r\n\t{\r\n\t  \"id\": 2,\r\n\t  \"name\": \"Istanul HL\"\r\n\t},\r\n\r\n\t{\r\n\t  \"id\": 3,\r\n\t  \"name\": \"Ankara HL\"\r\n\t}\r\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/company/add",
+			"request": {
+				"url": "http://localhost:8080/company/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n\t{\r\n\t  \"id\": 1,\r\n\t  \"name\": \"THY\"\r\n\t},\r\n\t{\r\n\t  \"id\": 2,\r\n\t  \"name\": \"PEGASUS\"\r\n\t}\r\n]"
+				},
+				"description": "adding list of company"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/company/getAll",
+			"request": {
+				"url": "http://localhost:8080/company/getAll",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n\t{\r\n\t  \"id\": 1,\r\n\t  \"name\": \"THY\"\r\n\t},\r\n\t{\r\n\t  \"id\": 2,\r\n\t  \"name\": \"PEGASUS\"\r\n\t}\r\n]"
+				},
+				"description": "getting all of company list"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/route/add",
+			"request": {
+				"url": "http://localhost:8080/route/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"destination_id\": {\r\n      \"id\": 1,\r\n      \"name\": \"string\"\r\n    },\r\n    \"origin_id\": {\r\n      \"id\": 2,\r\n      \"name\": \"string\"\r\n    },\r\n    \"route_id\": 1\r\n  },\r\n  {\r\n    \"destination_id\": {\r\n      \"id\": 2,\r\n      \"name\": \"string\"\r\n    },\r\n    \"origin_id\": {\r\n      \"id\": 3,\r\n      \"name\": \"string\"\r\n    },\r\n    \"route_id\": 2\r\n  }\r\n]"
+				},
+				"description": "adding a route using airpot id \norigin -destination"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/route/getAll",
+			"request": {
+				"url": "http://localhost:8080/route/getAll",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"destination_id\": {\r\n      \"id\": 1,\r\n      \"name\": \"string\"\r\n    },\r\n    \"origin_id\": {\r\n      \"id\": 2,\r\n      \"name\": \"string\"\r\n    },\r\n    \"route_id\": 1\r\n  },\r\n  {\r\n    \"destination_id\": {\r\n      \"id\": 2,\r\n      \"name\": \"string\"\r\n    },\r\n    \"origin_id\": {\r\n      \"id\": 3,\r\n      \"name\": \"string\"\r\n    },\r\n    \"route_id\": 2\r\n  }\r\n]"
+				},
+				"description": "retreive all routes"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/flight/add",
+			"request": {
+				"url": "http://localhost:8080/flight/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"company_id\": 1,\r\n    \"price\": 100,\r\n    \"quota\": 10,\r\n    \"route_id\": 1,\r\n    \"soldSeat\": 2\r\n  }\r\n]"
+				},
+				"description": "add new flights"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/flight/getAll",
+			"request": {
+				"url": "http://localhost:8080/flight/getAll",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"company_id\": 1,\r\n    \"price\": 100,\r\n    \"quota\": 10,\r\n    \"route_id\": 1,\r\n    \"soldSeat\": 2\r\n  }\r\n]"
+				},
+				"description": "retreive all flights"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/ticket/add",
+			"request": {
+				"url": "http://localhost:8080/ticket/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cost\": 10,\r\n  \"creditCard\": \"4221-1611-2233-0005\",\r\n  \"flight_id\": {\r\n    \"company\": {\r\n      \"id\": 1,\r\n      \"name\": \"string\"\r\n    },\r\n    \"id\": 1,\r\n    \"price\": 150,\r\n    \"quota\": 1000,\r\n    \"route\": {\r\n      \"destinationAirport\": {\r\n        \"id\": 0,\r\n        \"name\": \"string\"\r\n      },\r\n      \"id\": 2,\r\n      \"originAirport\": {\r\n        \"id\": 0,\r\n        \"name\": \"string\"\r\n      }\r\n    },\r\n    \"soldSeat\": 2\r\n  },\r\n  \"ticketStatus\": \"SOLD\"\r\n}"
+				},
+				"description": "buy a ticket"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/ticket/getAll",
+			"request": {
+				"url": "http://localhost:8080/ticket/getAll",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cost\": 10,\r\n  \"creditCard\": \"4221-1611-2233-0005\",\r\n  \"flight_id\": {\r\n    \"company\": {\r\n      \"id\": 1,\r\n      \"name\": \"string\"\r\n    },\r\n    \"id\": 1,\r\n    \"price\": 150,\r\n    \"quota\": 1000,\r\n    \"route\": {\r\n      \"destinationAirport\": {\r\n        \"id\": 0,\r\n        \"name\": \"string\"\r\n      },\r\n      \"id\": 2,\r\n      \"originAirport\": {\r\n        \"id\": 0,\r\n        \"name\": \"string\"\r\n      }\r\n    },\r\n    \"soldSeat\": 2\r\n  },\r\n  \"ticketStatus\": \"SOLD\"\r\n}"
+				},
+				"description": "display all tickets"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/ticket/update",
+			"request": {
+				"url": "http://localhost:8080/ticket/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cost\": 100,\r\n  \"creditCard\": \"4221-1611-2233-0005\",\r\n  \"flight_id\": 1,\r\n  \"ticketStatus\": \"CANCELED\",\r\n  \"id\":1\r\n}"
+				},
+				"description": "update ticket status"
+			},
+			"response": []
+		}
+	]
+}
